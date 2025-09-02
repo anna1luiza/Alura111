@@ -3,96 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introdução à Programação e Análise de Dados</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #0056b3;
-            text-align: center;
-        }
-        h2 {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background: #e9ecef;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-left: 5px solid #007bff;
-            border-radius: 4px;
-        }
-    </style>
+    <title>Desafio de Programação em Python</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Guia de Programação e Análise de Dados</h1>
+    <div class="container">
+        <header>
+            <h1>Introdução à Programação com Python</h1>
+            <p>Desenvolva suas habilidades lógicas com este desafio de programação.</p>
+        </header>
 
-    ---
+        <main>
+            <div class="challenge-box">
+                <h2>Desafio: Controle de Estoque de uma Loja</h2>
+                <p>
+                    Imagine que você está desenvolvendo um sistema simples de controle de estoque para uma pequena loja. O programa deverá permitir que o usuário gerencie a entrada e saída de produtos, além de verificar se há estoque suficiente para uma operação de saída.
+                </p>
 
-    <h2>Programação Básica: Variáveis, Operadores e Condicionais</h2>
-    <p>
-        Entenda os alicerces de qualquer linguagem de programação.
-        <ul>
-            <li><strong>Variáveis:</strong> Potes onde você armazena informações, como números ou textos.</li>
-            <li><strong>Operadores:</strong> Símbolos que realizam ações, como somar (+), subtrair (-) ou comparar (==).</li>
-            <li><strong>Condicionais:</strong> Estruturas que permitem que o seu código tome decisões (ex: "Se X for verdadeiro, faça isso; senão, faça aquilo").</li>
-        </ul>
-    </p>
+                <h3>Instruções</h3>
+                <p>O desafio deve ser resolvido em <strong>Python</strong>. O programa deve:</p>
+                <ul>
+                    <li>Começar com um estoque inicial predefinido.</li>
+                    <li>Receber comandos do usuário para adicionar ou remover produtos.</li>
+                    <li>Atualizar o estoque após cada operação.</li>
+                    <li>Exibir uma mensagem de erro se a quantidade de saída for maior que a disponível.</li>
+                    <li>Exibir o estoque atualizado após cada operação válida.</li>
+                </ul>
 
-    ---
+                <h3>Entrada</h3>
+                <ul>
+                    <li><strong>Estoque inicial:</strong> Uma lista de produtos e suas respectivas quantidades, como um dicionário em Python. Exemplo: <code>{'arroz': 50, 'feijao': 20, 'macarrao': 30}</code></li>
+                    <li><strong>Comandos:</strong> O programa deve ler entradas do usuário, como <code>'entrada arroz 10'</code> ou <code>'saida feijao 5'</code>.</li>
+                </ul>
 
-    <h2>Códigos Eficientes: Funções Modulares e Soluções Reutilizáveis</h2>
-    <p>
-        Aprenda a escrever códigos que sejam fáceis de ler e usar.
-        <ul>
-            <li><strong>Funções:</strong> Blocos de código que executam uma tarefa específica e podem ser chamados várias vezes.</li>
-            <li><strong>Reutilização:</strong> Evite repetir o mesmo código. Escrever funções é uma ótima maneira de garantir que suas soluções possam ser usadas em diferentes partes do seu projeto.</li>
-        </ul>
-    </p>
+                <h3>Saída Esperada</h3>
+                <ul>
+                    <li><strong>Estoque Atualizado:</strong> Após cada operação, o programa deve imprimir o estoque atual. Exemplo: <code>Estoque atualizado: {'arroz': 60, 'feijao': 20, 'macarrao': 30}</code></li>
+                    <li><strong>Mensagens de Erro:</strong> Se a quantidade for insuficiente, deve exibir uma mensagem como: <code>Erro: Quantidade insuficiente de feijao. Estoque atual: 10</code>.</li>
+                </ul>
+            </div>
 
-    ---
+            <section class="solution-section">
+                <h2>Sugestão de Estrutura e Lógica</h2>
+                <p>Para resolver este desafio, você pode seguir a seguinte lógica:</p>
+                <ul>
+                    <li>Use um <strong>dicionário</strong> para armazenar os produtos e suas quantidades.</li>
+                    <li>Use um <strong>laço de repetição</strong> (como <code>while</code>) para permitir que o usuário insira comandos continuamente.</li>
+                    <li>Use uma <strong>estrutura condicional</strong> (<code>if/elif/else</code>) para verificar se o comando é de entrada ou saída e para tratar a condição de estoque insuficiente.</li>
+                </ul>
 
-    <h2>Dados Organizados: Coleta, Tabelas e Uso do Google Colab</h2>
-    <p>
-        Transforme informações brutas em dados prontos para análise.
-        <ul>
-            <li><strong>Coleta de Dados:</strong> O processo de reunir informações de diferentes fontes.</li>
-            <li><strong>Tabelas:</strong> A melhor forma de organizar dados em linhas e colunas, como em uma planilha.</li>
-            <li><strong>Google Colab:</strong> Uma ferramenta gratuita baseada em nuvem que permite escrever e executar código Python diretamente no seu navegador, perfeito para trabalhar com dados.</li>
-        </ul>
-    </p>
+                <h3>Exemplo de Código (Estrutura)</h3>
+                <pre><code class="language-python">
+# Este é um esqueleto do código. O desafio é que você complete a lógica.
 
-    ---
+estoque = {'arroz': 50, 'feijao': 20, 'macarrao': 30}
 
-    <h2>Análises Visuais: Gráficos e Estatísticas para Interpretar Dados</h2>
-    <p>
-        Descubra como contar a história dos seus dados com imagens.
-        <ul>
-            <li><strong>Gráficos:</strong> Ferramentas visuais (como gráficos de barras, pizza ou linhas) que facilitam a compreensão de grandes volumes de dados.</li>
-            <li><strong>Estatísticas:</strong> Resumos numéricos que te ajudam a entender as principais características dos seus dados, como média, mediana e desvio padrão.</li>
-        </ul>
-    </p>
-</div>
+def gerenciar_estoque():
+    while True:
+        comando = input("Digite o comando (ex: 'entrada arroz 10' ou 'saida feijao 5'): ")
+        partes = comando.split()
+        
+        if len(partes) != 3:
+            print("Comando inválido. Tente novamente.")
+            continue
+            
+        acao, produto, quantidade_str = partes
+        
+        try:
+            quantidade = int(quantidade_str)
+        except ValueError:
+            print("Quantidade inválida. A quantidade deve ser um número inteiro.")
+            continue
+
+        if produto not in estoque:
+            print(f"Erro: Produto '{produto}' não encontrado no estoque.")
+            continue
+        
+        if acao == 'entrada':
+            # Sua lógica aqui: adicione a quantidade ao estoque do produto
+            pass
+        elif acao == 'saida':
+            # Sua lógica aqui: remova a quantidade e verifique se há estoque suficiente
+            pass
+        else:
+            print("Ação inválida. Use 'entrada' ou 'saida'.")
+
+        print("Estoque atualizado:", estoque)
+
+# Descomente a linha abaixo para executar o código
+# gerenciar_estoque()
+                </code></pre>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                <hr>
+                Boa sorte! Crie e teste sua solução para o desafio.
+            </p>
+        </footer>
+    </div>
 
 </body>
 </html>
